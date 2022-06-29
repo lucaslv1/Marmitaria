@@ -27,4 +27,7 @@ public class Item {
     @Column(precision = 2)
     private Double value;
 
+    @Column
+    private Boolean isActive;
+
 }

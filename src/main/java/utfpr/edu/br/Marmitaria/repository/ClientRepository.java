@@ -6,5 +6,5 @@ import utfpr.edu.br.Marmitaria.model.Client;
 
 @Repository
 public interface ClientRepository extends JpaRepository<Client, Long> {
-
+    Boolean existsByName(String name);
 }

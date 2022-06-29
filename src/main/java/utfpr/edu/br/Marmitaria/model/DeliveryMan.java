@@ -3,6 +3,7 @@ package utfpr.edu.br.Marmitaria.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity
 public class DeliveryMan {
@@ -13,7 +14,7 @@ public class DeliveryMan {
 
     private String name;
 
-    private Delivery delivery;
+    private List<Delivery> delivery;
 
     private Integer entregasRealizadas;
 }

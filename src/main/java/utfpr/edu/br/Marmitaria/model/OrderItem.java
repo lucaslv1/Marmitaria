@@ -1,31 +1,26 @@
 package utfpr.edu.br.Marmitaria.model;
 
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
-@Entity
-@Data
-@Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class Client {
+@NoArgsConstructor
+@Builder
+public class OrderItem {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    @NotNull
-    private String name;
+    @ManyToOne
+    private Order order;
 
-    private String address;
-
-    private String phone;
-
+    @ManyToOne
+    private Item item;
 }
